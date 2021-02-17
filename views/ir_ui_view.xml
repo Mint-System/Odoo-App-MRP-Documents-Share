@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="mrp_documents_share.portal_my_purchase_order" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//span[@t-esc='ol.name']" position="after">
+                    <t t-if="ol.product_id.x_drawing">
+                            <br/>
+                            <span>Zeichnung: </span>
+                            <a t-attf-href="{{ol.product_id.x_drawing.url}}">
+                            <span t-field="ol.product_id.x_drawing.display_name"/>
+                            </a>
+                        </t>
+                        <t t-if="ol.product_id.x_step_file">
+                            <br/>
+                            <span>STEP-Datei: </span>
+                            <a t-attf-href="{{ol.product_id.x_step_file.url}}">
+                                <span t-field="ol.product_id.x_step_file.display_name"/>
+                            </a>
+                        </t>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="purchase.portal_my_purchase_order"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">purchase.order</field>
+        <field name="name">MRP Documents Share: Add drawing and step file links to purchase order portal</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
+    </record>
+
+    <record id="mrp_documents_share.product_normal_form_view" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='version']" position="after">
+                    <field name="x_drawing"/>
+                    <field name="x_step_file"/>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">product.product</field>
+        <field name="name">MRP Documents Share: Add drawing and step file fields to product form</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
+    </record>
+
+    <record id="mrp_documents_share.report_purchaseorder_document" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]/span" position="after">
+                    <t t-if="line.product_id.x_drawing">
+                        <br/>
+                        <span>Zeichnung: </span>
+                        <a t-attf-href="{{line.product_id.x_drawing.url}}">
+                            <span t-field="line.product_id.x_drawing.display_name"/>
+                        </a>
+                    </t>
+                    <t t-if="line.product_id.x_step_file">
+                        <br/>
+                        <span>STEP-Datei: </span>
+                        <a t-attf-href="{{line.product_id.x_step_file.url}}">
+                            <span t-field="line.product_id.x_step_file.display_name"/>
+                        </a>
+                    </t>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="purchase.report_purchaseorder_document"/>
+        <field name="key">gen_key.b0c743</field>
+        <field name="mode">extension</field>
+        <field name="model" eval="False"/>
+        <field name="name">MRP Documents Share: Add drawing and step file links to purchase order report</field>
+        <field name="priority">99</field>
+        <field name="type">qweb</field>
+    </record>
+
+    <record id="mrp_documents_share.report_purchasequotation_document" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="/t/t/div/table/tbody/t/tr/t[1]/td[1]/span" position="after">
+                    <t t-if="order_line.product_id.x_drawing">
+                        <br/>
+                        <span>Zeichnung: </span>
+                        <a t-attf-href="{{order_line.product_id.x_drawing.url}}">
+                            <span t-field="order_line.product_id.x_drawing.display_name"/>
+                        </a>
+                    </t>
+                    <t t-if="order_line.product_id.x_step_file">
+                        <br/>
+                        <span>STEP-Datei: </span>
+                        <a t-attf-href="{{order_line.product_id.x_step_file.url}}">
+                            <span t-field="order_line.product_id.x_step_file.display_name"/>
+                        </a>
+                    </t>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="purchase.report_purchasequotation_document"/>
+        <field name="key">gen_key.ddccdd</field>
+        <field name="mode">extension</field>
+        <field name="model" eval="False"/>
+        <field name="name">MRP Documents Share: Add drawing and step file links to purchase quotation report</field>
+        <field name="priority">99</field>
+        <field name="type">qweb</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <record id="mrp_documents_share.x_drawing" model="ir.model.fields">
+        <field name="complete_name" eval="False"/>
+        <field name="compute" eval="False"/>
+        <field name="copied" eval="False"/>
+        <field name="depends" eval="False"/>
+        <field name="domain">[]</field>
+        <field name="field_description">Zeichnung</field>
+        <field name="groups" eval="[(6, 0, [])]"/>
+        <field name="help" eval="False"/>
+        <field name="index" eval="False"/>
+        <field name="model">product.product</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="name">x_drawing</field>
+        <field name="on_delete">set null</field>
+        <field name="readonly" eval="False"/>
+        <field name="related" eval="False"/>
+        <field name="relation">mrp.document</field>
+        <field name="relation_field" eval="False"/>
+        <field name="relation_table" eval="False"/>
+        <field name="required" eval="False"/>
+        <field name="selectable" eval="True"/>
+        <field name="selection" eval="False"/>
+        <field name="size" eval="False"/>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+        <field name="tracking" eval="False"/>
+        <field name="translate" eval="False"/>
+        <field name="ttype">many2one</field>
+    </record>
+    <record id="mrp_documents_share.x_step_file" model="ir.model.fields">
+        <field name="complete_name" eval="False"/>
+        <field name="compute" eval="False"/>
+        <field name="copied" eval="False"/>
+        <field name="depends" eval="False"/>
+        <field name="domain">[]</field>
+        <field name="field_description">STEP-Datei</field>
+        <field name="groups" eval="[(6, 0, [])]"/>
+        <field name="help" eval="False"/>
+        <field name="index" eval="False"/>
+        <field name="model">product.product</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="name">x_step_file</field>
+        <field name="on_delete">set null</field>
+        <field name="readonly" eval="False"/>
+        <field name="related" eval="False"/>
+        <field name="relation">mrp.document</field>
+        <field name="relation_field" eval="False"/>
+        <field name="relation_table" eval="False"/>
+        <field name="required" eval="False"/>
+        <field name="selectable" eval="True"/>
+        <field name="selection" eval="False"/>
+        <field name="size" eval="False"/>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+        <field name="tracking" eval="False"/>
+        <field name="translate" eval="False"/>
+        <field name="ttype">many2one</field>
+    </record>
+</odoo>
