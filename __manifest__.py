@@ -7,13 +7,13 @@
     """,
 
     'description': """
-        Share product drawing and step files with vendors and show them during product assembling.
+        Share product drawing and step files with vendors and link them in the workorder tablet view.
     """,
 
     'author': "Mint System GmbH",
     'website': "https://www.mint-system.ch",
-    'category': 'Uncategorized', # See odoo/addons/base/data/ir_module_category_data.xml
-    'version': '14.0.1.0.0',
+    'category': 'Manufacturing',
+    'version': '14.0.1.0.1',
 
     'depends': ['mrp', 'purchase'],
 

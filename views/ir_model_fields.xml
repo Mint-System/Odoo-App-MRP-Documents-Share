@@ -58,7 +58,7 @@
         <field name="translate" eval="False"/>
         <field name="ttype">many2one</field>
     </record>
-    <record id="mrp_documents_share.x_workorder_drawing_file" model="ir.model.fields" context="{'studio': True}">
+    <record id="mrp_documents_share.x_workorder_drawing_file" model="ir.model.fields">
         <field name="complete_name" eval="False"/>
         <field name="compute" eval="False"/>
         <field name="copied" eval="False"/>

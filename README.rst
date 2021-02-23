@@ -6,7 +6,7 @@ MRP Documents Share
   :width: 100
   :alt: Icon
 
-Share product drawing and step files with vendors and show them during product assembling.
+Share product drawing and step files with vendors and link them in the workorder tablet view.
 
 Usage
 ~~~~~
