@@ -25,6 +25,9 @@
                 </xpath>
             </data>
         </field>
+        <field name="mode">extension</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
     </record>
 
     <record id="mrp_documents_share.product_template_form_view" model="ir.ui.view">
@@ -39,6 +42,9 @@
                 </xpath>
             </data>
         </field>
+        <field name="mode">extension</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
     </record>
 
     <record id="mrp_documents_share.report_purchaseorder_document" model="ir.ui.view">
@@ -64,6 +70,10 @@
                 </xpath>
             </data>
         </field>
+        <field name="mode">extension</field>
+        <field name="model" eval="False"/>
+        <field name="priority">99</field>
+        <field name="type">qweb</field>
     </record>
 
     <record id="mrp_documents_share.report_purchasequotation_document" model="ir.ui.view">
@@ -89,6 +99,10 @@
                 </xpath>
             </data>
         </field>
+        <field name="mode">extension</field>
+        <field name="model" eval="False"/>
+        <field name="priority">99</field>
+        <field name="type">qweb</field>
     </record>
 
     <record id="mrp_documents_share.mrp_workorder_view_form_tablet" model="ir.ui.view">
@@ -102,6 +116,9 @@
                 </xpath>
             </data>
         </field>
+        <field name="mode">extension</field>
+        <field name="priority">99</field>
+        <field name="type">qweb</field>
     </record>
 
 </odoo>
