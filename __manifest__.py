@@ -13,7 +13,7 @@
     'author': "Mint System GmbH",
     'website': "https://www.mint-system.ch",
     'category': 'Manufacturing',
-    'version': '14.0.1.2.0',
+    'version': '14.0.1.2.1',
 
     'depends': ['mrp', 'purchase'],
 

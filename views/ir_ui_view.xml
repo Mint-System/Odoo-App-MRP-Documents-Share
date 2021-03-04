@@ -116,6 +116,7 @@
                 </xpath>
             </data>
         </field>
+        <field name="key">mrp_documents_share.mrp_workorder_view_form_tablet</field>
         <field name="mode">extension</field>
         <field name="priority">99</field>
         <field name="type">qweb</field>
