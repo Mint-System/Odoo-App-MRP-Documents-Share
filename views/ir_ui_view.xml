@@ -35,7 +35,7 @@
             </data>
         </field>
         <field name="mode">extension</field>
-        <field name="priority">99</field>
+        <field name="priority">20</field>
         <field name="type">form</field>
     </record>
 
@@ -64,7 +64,7 @@
         </field>
         <field name="mode">extension</field>
         <field name="model" eval="False"/>
-        <field name="priority">99</field>
+        <field name="priority">20</field>
         <field name="type">qweb</field>
     </record>
 
@@ -93,7 +93,7 @@
         </field>
         <field name="mode">extension</field>
         <field name="model" eval="False"/>
-        <field name="priority">99</field>
+        <field name="priority">20</field>
         <field name="type">qweb</field>
     </record>
 
@@ -110,7 +110,7 @@
         </field>
         <field name="key">mrp_workorder_view_form_tablet</field>
         <field name="mode">extension</field>
-        <field name="priority">99</field>
+        <field name="priority">20</field>
         <field name="type">qweb</field>
     </record>
 
