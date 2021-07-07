@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
-    <record id="mrp_documents_share.menu_mrp_bom" model="ir.ui.menu">
-        <field name="action" ref="mrp_documents_share.ir_actions_act_window"/>
-        <field name="active" eval="True"/>
-        <field name="groups_id" eval="[(6, 0, [])]"/>
-        <field name="name">Produktionsdokumente</field>
+    <record id="mrp_document_menu" model="ir.ui.menu">
+        <field name="action" ref="mrp_document_list_action"/>
+        <field name="name">Production Documents</field>
         <field name="parent_id" ref="mrp.menu_mrp_bom"/>
         <field name="sequence">2</field>
-        <field name="web_icon" eval="False"/>
     </record>
 </odoo>
